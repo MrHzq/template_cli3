@@ -2,13 +2,20 @@
  * @Author: hzq
  * @Date: 2018-08-28 17:50:19
  * @Last Modified by: hzq
- * @Last Modified time: 2018-11-20 16:59:10
+ * @Last Modified time: 2018-12-10 11:30:15
  * @文件说明: 所有路由处理
  */
 import channel from './channel'
 let all = Object.assign(
     {
-        '/': [{ name: 'test' }]
+        '/': [
+            { name: 'test' }
+            // {
+            //     name: 'home',
+            //     children: ['publish-article', 'my-article'],
+            //     meta: { requiresAuth: true }
+            // }
+        ]
     },
     channel
 )

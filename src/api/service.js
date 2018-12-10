@@ -2,15 +2,26 @@
  * @Author: hzq
  * @Date: 2018-08-28 16:05:27
  * @Last Modified by: hzq
- * @Last Modified time: 2018-11-20 17:05:50
+ * @Last Modified time: 2018-12-10 11:29:54
  * @文件说明: 请求配置
  */
 import axios from 'axios'
-import apiError from './apiError'
+
+// 默认为：测试环境
+let baseURL = 'https://open-api.beone.app'
+
+if (process.env.PATH_ENV === 'prod') {
+    // 正式环境
+    baseURL = 'https://api.dzqqsc.com'
+} else if (process.env.PATH_ENV === 'pre') {
+    // 预发布环境
+    baseURL = 'https://api-t.xkt.one'
+}
+
 // 创建实例时设置配置的默认值
 const Service = axios.create({
-    baseURL: 'https://open-api.beone.app',
-    timeout: 1000 * 6, // 6秒超时
+    // timeout: 1000 * 6, // 6秒超时
+    baseURL,
     headers: { 'Content-Type': 'application/json; charset=UTF-8' }
 })
 // 添加请求拦截器
@@ -29,12 +40,11 @@ Service.interceptors.request.use(
 Service.interceptors.response.use(
     response => {
         // 对响应数据做点什么
-        return response.body
+        return response.data
     },
     error => {
         // 对响应错误做点什么
         if (error) {
-            apiError(error)
             return Promise.reject(error.response.data)
         }
     }

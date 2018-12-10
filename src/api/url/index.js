@@ -6,4 +6,4 @@
  * @文件说明: 引入所有请求地址
  */
 import test from './test'
-export default [...test]
+export default [].concat(test)

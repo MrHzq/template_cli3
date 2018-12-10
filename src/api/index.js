@@ -12,10 +12,10 @@ export default {
         let api = {}
         Url.map(u => {
             let methods = u.methods || 'post'
-            api[u.name] = data => {
+            api[u.name] = (data, headers = {}) => {
                 let params = data || {}
                 if (methods === 'get') params = { params }
-                return Service[methods]('/web' + u.url, params)
+                return Service[methods]('/web' + u.url, params, { headers })
             }
         })
         Vue.prototype.$api = api
