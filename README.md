@@ -3,7 +3,7 @@
 ## 已有配置
 
 1. `vuex`：Vue 的状态管理模式，具体请看`store文件`
-1. `sass`：CSS 预处理器
+1. `scss`：CSS 预处理器
 1. `Element`：UI 框架
 
 ## 已有插件

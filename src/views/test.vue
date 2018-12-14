@@ -10,10 +10,12 @@
     export default {
         name: 'test',
         created() {
-            this.$api.login({
-                phone: '13402318457',
-                code: '123458'
-            })
+            this.$api
+                .login({
+                    phone: '13402318457',
+                    code: '123458'
+                })
+                .then(res => console.log(res))
         }
     }
 </script>
