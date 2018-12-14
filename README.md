@@ -4,7 +4,6 @@
 
 1. `vuex`：Vue 的状态管理模式，具体请看`store文件`
 1. `scss`：CSS 预处理器
-1. `Element`：UI 框架
 
 ## 已有插件
 
@@ -17,4 +16,4 @@
 
 1. 先安装脚手架[hzq-cli](https://www.npmjs.com/package/hzq-cli)：`npm i -g hzq-cli`
 1. `h -V`：查看版本号，确保安装成功
-1. `h i`：根据提示，选择框架`cli3`即可
+1. `h i`：根据提示，选择框架`cli3_base`即可

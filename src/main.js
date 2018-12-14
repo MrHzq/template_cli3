@@ -5,11 +5,9 @@ import store from './store'
 
 import hzqTool from 'hzq-tool'
 import hzqAxios from 'hzq-axios'
-import Element from 'element-ui'
 
 import apiUrl from './apiUrl'
 
-Vue.use(Element)
 Vue.use(hzqTool)
 
 Vue.use(hzqAxios, apiUrl, {
