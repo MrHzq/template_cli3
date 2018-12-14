@@ -1,7 +1,6 @@
 <template>
     <div class="test">
-        我是Element UI
-        <i class="el-icon-edit"></i>
+        <div>我是：Vue 项目模板--Vue Cli 3</div>
         <el-button type="success">Element UI</el-button>
     </div>
 </template>
