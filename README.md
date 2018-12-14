@@ -1,4 +1,4 @@
-# Vue 项目模板--Vue Cli 3
+# Vue 项目模板--Vue Cli 3 + Base
 
 ## 已有配置
 
