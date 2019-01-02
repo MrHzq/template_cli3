@@ -6,12 +6,11 @@ import store from './store'
 import hzqTool from 'hzq-tool'
 import hzqAxios from 'hzq-axios'
 
-import apiUrl from './apiUrl'
 import './components/global'
 
 Vue.use(hzqTool)
 
-Vue.use(hzqAxios, apiUrl, {
+Vue.use(hzqAxios, require.context('@/apiUrl', true, /\.js$/), {
     baseURL: 'https://open-api.beone.app'
 })
 
